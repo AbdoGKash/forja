@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "986954985396",
+    "project_id": "forja-ff92b",
+    "storage_bucket": "forja-ff92b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986954985396:android:b13e3c7643571a686e0ce1",
+        "android_client_info": {
+          "package_name": "com.example.forja"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCsWkCDODPYEjAdrNWgQGEaqsPsX0-AWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

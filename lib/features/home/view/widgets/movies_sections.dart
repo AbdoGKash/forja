@@ -33,7 +33,7 @@ class MoviesSections extends StatelessWidget {
                   },
                   icon: Icon(
                     Icons.view_agenda_rounded,
-                    color: ColorsManger.white,
+                    color: ColorsManger.white.withOpacity(0.8),
                   ))
             ],
           ),
