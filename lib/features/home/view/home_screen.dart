@@ -4,10 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:forja/core/helper/app_strings.dart';
 import 'package:forja/core/theming/color_manger.dart';
 import 'package:forja/features/home/logic/cubit/home_cubit.dart';
-
 import 'widgets/foryou_sections.dart';
 import 'widgets/movies_sections.dart';
-import 'widgets/movies_sections_name.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -43,33 +41,25 @@ class HomeScreen extends StatelessWidget {
                       moviesName: moviceForYou[0].name.toString(),
                       moviesRating: moviceForYou[0].rating.toString(),
                     ),
-                    const MoviesSectionsName(
+                    MoviesSections(
+                      movies: moviceAction!,
+                      itemCount: moviceAction.length,
                       name: AppStrings.action,
                     ),
                     MoviesSections(
-                      movice: moviceAction!,
-                      itemCount: moviceAction.length,
-                    ),
-                    const MoviesSectionsName(
+                      movies: moviceComedy!,
+                      itemCount: moviceComedy.length,
                       name: AppStrings.comedy,
                     ),
                     MoviesSections(
-                      movice: moviceComedy!,
-                      itemCount: moviceComedy.length,
-                    ),
-                    const MoviesSectionsName(
+                      movies: moviceRomantic!,
+                      itemCount: moviceRomantic.length,
                       name: AppStrings.romantic,
                     ),
                     MoviesSections(
-                      movice: moviceRomantic!,
-                      itemCount: moviceRomantic.length,
-                    ),
-                    const MoviesSectionsName(
-                      name: AppStrings.animation,
-                    ),
-                    MoviesSections(
-                      movice: moviceAnimation!,
+                      movies: moviceAnimation!,
                       itemCount: moviceAnimation.length,
+                      name: AppStrings.animation,
                     )
                   ],
                 ),
