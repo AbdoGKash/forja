@@ -1,4 +1,4 @@
-import 'package:forja/features/home/data/model/movice_model.dart';
+import 'package:forja/features/home/data/model/movies_model.dart';
 
 import '../../../../core/networking/api_service.dart';
 
@@ -7,7 +7,7 @@ class HomeRepo {
 
   HomeRepo(this._apiService);
 
-  Future<Movice> home() async {
+  Future<Movies> home() async {
     return await _apiService.home();
   }
 }

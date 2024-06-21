@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:forja/features/home/data/model/movice_model.dart';
+import 'package:forja/features/home/data/model/movies_model.dart';
 import 'package:retrofit/http.dart';
 import 'api_constants.dart';
 
@@ -10,5 +10,5 @@ abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
   @GET(ApiConstants.home)
-  Future<Movice> home();
+  Future<Movies> home();
 }

@@ -8,6 +8,6 @@ final class HomeInitial extends HomeState {}
 class LoadingState extends HomeState {}
 
 class LoadedState extends HomeState {
-  final Movice movice;
+  final Movies movice;
   LoadedState(this.movice);
 }

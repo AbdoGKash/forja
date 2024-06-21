@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:forja/core/helper/app_strings.dart';
 import 'package:forja/core/theming/color_manger.dart';
-import 'package:forja/features/home/data/model/movice_model.dart';
+import 'package:forja/features/home/data/model/movies_model.dart';
 import 'package:forja/features/home/logic/cubit/home_cubit.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -78,7 +78,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _section(
-      BuildContext context, int itemCount, List<MoviceDetails> movice) {
+      BuildContext context, int itemCount, List<MoviesDetails> movice) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: 150.h,
@@ -118,21 +118,21 @@ class HomeScreen extends StatelessWidget {
         Positioned(
             bottom: 0,
             child: Container(
-              height: 130, // .h
+              height: 130.h, // .h
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Colors.black.withOpacity(0),
-                    Colors.black
+                    ColorsManger.black.withOpacity(0),
+                    ColorsManger.black
                   ], // ColorsManger.black
                 ),
               ),
-              child: const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Column(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0).w,
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [

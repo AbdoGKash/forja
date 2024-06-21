@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:forja/features/home/data/model/movice_model.dart';
+import 'package:forja/features/home/data/model/movies_model.dart';
 import 'package:bloc/bloc.dart';
 import 'package:forja/features/home/data/repo/home_repo.dart';
 part 'home_state.dart';
