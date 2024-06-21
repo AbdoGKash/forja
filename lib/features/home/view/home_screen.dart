@@ -6,6 +6,10 @@ import 'package:forja/core/theming/color_manger.dart';
 import 'package:forja/features/home/data/model/movies_model.dart';
 import 'package:forja/features/home/logic/cubit/home_cubit.dart';
 
+import 'widgets/foryou_sections.dart';
+import 'widgets/movies_sections.dart';
+import 'widgets/movies_sections_name.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -35,15 +39,39 @@ class HomeScreen extends StatelessWidget {
               return SingleChildScrollView(
                 child: Column(
                   children: [
-                    _header(context, moviceForYou![0].cover.toString()),
-                    _textSection(AppStrings.action, context),
-                    _section(context, moviceAction!.length, moviceAction),
-                    _textSection("Comedy", context),
-                    _section(context, moviceComedy!.length, moviceComedy),
-                    _textSection("Romantic", context),
-                    _section(context, moviceRomantic!.length, moviceRomantic),
-                    _textSection("Animation", context),
-                    _section(context, moviceAnimation!.length, moviceAnimation),
+                    ForyouSections(
+                      moviesCover: moviceForYou![0].cover.toString(),
+                      moviesName: '',
+                      moviesRating: '',
+                    ),
+                    const MoviesSectionsName(
+                      name: AppStrings.action,
+                    ),
+                    MoviesSections(
+                      movice: moviceAction!,
+                      itemCount: moviceAction.length,
+                    ),
+                    const MoviesSectionsName(
+                      name: AppStrings.comedy,
+                    ),
+                    MoviesSections(
+                      movice: moviceComedy!,
+                      itemCount: moviceComedy.length,
+                    ),
+                    const MoviesSectionsName(
+                      name: AppStrings.romantic,
+                    ),
+                    MoviesSections(
+                      movice: moviceRomantic!,
+                      itemCount: moviceRomantic.length,
+                    ),
+                    const MoviesSectionsName(
+                      name: AppStrings.animation,
+                    ),
+                    MoviesSections(
+                      movice: moviceAnimation!,
+                      itemCount: moviceAnimation.length,
+                    )
                   ],
                 ),
               );
@@ -52,115 +80,6 @@ class HomeScreen extends StatelessWidget {
           },
         ),
       ),
-    );
-  }
-
-  Widget _textSection(String text, BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,
-      child: Row(
-        children: [
-          Text(
-            text,
-            style: const TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          const Spacer(),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.view_agenda_rounded,
-                color: Colors.white,
-              ))
-        ],
-      ),
-    );
-  }
-
-  Widget _section(
-      BuildContext context, int itemCount, List<MoviesDetails> movice) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      height: 150.h,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: itemCount,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(6.0).w,
-            child: InkWell(
-              onTap: () {},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(5),
-                child: Image.network(
-                  movice[index].cover.toString(),
-                ),
-              ),
-            ),
-          );
-        },
-      ),
-    );
-  }
-
-  Widget _header(BuildContext context, String image) {
-    return Stack(
-      children: [
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height / 2,
-          decoration: BoxDecoration(color: ColorsManger.black),
-          child: Image.network(
-            image,
-            fit: BoxFit.cover,
-          ),
-        ),
-        Positioned(
-            bottom: 0,
-            child: Container(
-              height: 130.h, // .h
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    ColorsManger.black.withOpacity(0),
-                    ColorsManger.black
-                  ], // ColorsManger.black
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0).w,
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      "Movice Name", // From API
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                          size: 15,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          "9.5", // From API
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ))
-      ],
     );
   }
 }
