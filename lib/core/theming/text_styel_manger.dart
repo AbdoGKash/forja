@@ -8,4 +8,17 @@ class TextStyelManger {
     fontWeight: FontWeight.bold,
     color: ColorsManger.black,
   );
+  static TextStyle font20WhiteBold = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+    color: ColorsManger.white,
+  );
+  static TextStyle font16White = TextStyle(
+    fontSize: 16.sp,
+    color: ColorsManger.white,
+  );
+  static TextStyle font14White = TextStyle(
+    fontSize: 14.sp,
+    color: ColorsManger.white,
+  );
 }

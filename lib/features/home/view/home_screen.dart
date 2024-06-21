@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:forja/core/helper/app_strings.dart';
+import 'package:forja/core/theming/color_manger.dart';
 import 'package:forja/features/home/data/model/movice_model.dart';
 import 'package:forja/features/home/logic/cubit/home_cubit.dart';
 
@@ -16,11 +19,11 @@ class HomeScreen extends StatelessWidget {
               current is LoadingState || current is LoadedState,
           builder: (context, state) {
             if (state is LoadingState) {
-              return const Padding(
-                padding: EdgeInsets.all(150.0),
+              return Padding(
+                padding: const EdgeInsets.all(150.0).w,
                 child: Center(
                     child: CircularProgressIndicator(
-                  color: Colors.amber,
+                  color: ColorsManger.yellow,
                 )),
               );
             } else if (state is LoadedState) {
@@ -33,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     _header(context, moviceForYou![0].cover.toString()),
-                    _textSection("Action", context),
+                    _textSection(AppStrings.action, context),
                     _section(context, moviceAction!.length, moviceAction),
                     _textSection("Comedy", context),
                     _section(context, moviceComedy!.length, moviceComedy),
@@ -54,7 +57,7 @@ class HomeScreen extends StatelessWidget {
 
   Widget _textSection(String text, BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,
       child: Row(
         children: [
           Text(
@@ -78,13 +81,13 @@ class HomeScreen extends StatelessWidget {
       BuildContext context, int itemCount, List<MoviceDetails> movice) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
-      height: 150,
+      height: 150.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: itemCount,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(6.0),
+            padding: const EdgeInsets.all(6.0).w,
             child: InkWell(
               onTap: () {},
               child: ClipRRect(
@@ -106,7 +109,7 @@ class HomeScreen extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 2,
-          decoration: const BoxDecoration(color: Colors.black),
+          decoration: BoxDecoration(color: ColorsManger.black),
           child: Image.network(
             image,
             fit: BoxFit.cover,

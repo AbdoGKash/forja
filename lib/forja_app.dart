@@ -8,11 +8,11 @@ class ForjaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(360, 690),
+    return const ScreenUtilInit(
+      designSize: Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         initialRoute: RoutersName.homeSreen,
         onGenerateRoute: AppRouter.generateRoute,
