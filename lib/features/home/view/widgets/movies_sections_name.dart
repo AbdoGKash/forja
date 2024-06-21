@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:forja/core/theming/color_manger.dart';
+import 'package:forja/core/theming/text_styel_manger.dart';
 
 class MoviesSectionsName extends StatelessWidget {
   final String name;
@@ -13,17 +15,13 @@ class MoviesSectionsName extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,
       child: Row(
         children: [
-          Text(
-            name,
-            style: const TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+          Text(name, style: TextStyelManger.font20WhiteBold),
           const Spacer(),
           IconButton(
               onPressed: () {},
-              icon: const Icon(
+              icon: Icon(
                 Icons.view_agenda_rounded,
-                color: Colors.white,
+                color: ColorsManger.white,
               ))
         ],
       ),

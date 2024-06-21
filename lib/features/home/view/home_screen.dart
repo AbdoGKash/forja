@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:forja/core/helper/app_strings.dart';
 import 'package:forja/core/theming/color_manger.dart';
-import 'package:forja/features/home/data/model/movies_model.dart';
 import 'package:forja/features/home/logic/cubit/home_cubit.dart';
 
 import 'widgets/foryou_sections.dart';
@@ -41,8 +40,8 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     ForyouSections(
                       moviesCover: moviceForYou![0].cover.toString(),
-                      moviesName: '',
-                      moviesRating: '',
+                      moviesName: moviceForYou[0].name.toString(),
+                      moviesRating: moviceForYou[0].rating.toString(),
                     ),
                     const MoviesSectionsName(
                       name: AppStrings.action,

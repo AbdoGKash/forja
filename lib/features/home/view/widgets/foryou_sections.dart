@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:forja/core/theming/text_styel_manger.dart';
 
 import '../../../../core/theming/color_manger.dart';
 
@@ -49,21 +50,21 @@ class ForyouSections extends StatelessWidget {
                   children: [
                     Text(
                       moviesName,
-                      style: const TextStyle(color: Colors.white, fontSize: 16),
+                      style: TextStyelManger.font16White,
                     ),
                     Row(
                       children: [
                         Icon(
                           Icons.star,
-                          color: Colors.amber,
+                          color: ColorsManger.yellow,
                           size: 15,
                         ),
                         SizedBox(
-                          width: 5,
+                          width: 5.w,
                         ),
                         Text(
-                          moviesRating, // From API
-                          style: TextStyle(color: Colors.white),
+                          moviesRating,
+                          style: TextStyelManger.font14White,
                         ),
                       ],
                     ),
