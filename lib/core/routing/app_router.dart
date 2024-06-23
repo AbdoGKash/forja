@@ -7,6 +7,8 @@ import 'package:forja/features/home/view/home_screen.dart';
 import 'package:forja/features/list_movice/view/list_movise_screen.dart';
 
 import '../../features/home/data/model/movies_model.dart';
+import '../../features/otp/otp_screen.dart';
+import '../../features/phone_auth/view/phone_auth_screen.dart';
 
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
@@ -25,6 +27,18 @@ class AppRouter {
             movies: movies,
           ),
         );
+      case RoutersName.authSreen:
+        return MaterialPageRoute(
+          builder: (_) => PhoneAuthScreen(),
+        );
+      case RoutersName.otpSreen:
+        return MaterialPageRoute(
+          builder: (_) => OtpScreen(),
+        );
+      // case RoutersName.moviseDetailsScreen:
+      //   return MaterialPageRoute(
+      //     builder: (_) => const MoviseDetailsScreen(),
+      //   );
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(
