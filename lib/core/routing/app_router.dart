@@ -5,6 +5,7 @@ import 'package:forja/core/routing/routers_name.dart';
 import 'package:forja/features/home/logic/cubit/home_cubit.dart';
 import 'package:forja/features/home/view/home_screen.dart';
 import 'package:forja/features/list_movice/view/list_movise_screen.dart';
+import 'package:forja/features/phone_auth/logic/cubit/auth_phone_cubit.dart';
 
 import '../../features/home/data/model/movies_model.dart';
 import '../../features/otp/otp_screen.dart';
@@ -29,11 +30,18 @@ class AppRouter {
         );
       case RoutersName.authSreen:
         return MaterialPageRoute(
-          builder: (_) => PhoneAuthScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => PhoneAuthCubit(),
+            child: PhoneAuthScreen(),
+          ),
         );
       case RoutersName.otpSreen:
+        final phoneNumber = settings.arguments;
         return MaterialPageRoute(
-          builder: (_) => OtpScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => PhoneAuthCubit(),
+            child: OtpScreen(phoneNumber: phoneNumber),
+          ),
         );
       // case RoutersName.moviseDetailsScreen:
       //   return MaterialPageRoute(

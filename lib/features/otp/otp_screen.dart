@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:forja/core/helper/app_strings.dart';
+import 'package:forja/core/routing/routers_name.dart';
 import 'package:forja/core/theming/color_manger.dart';
 import 'package:forja/core/theming/text_styel_manger.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
+import '../phone_auth/logic/cubit/auth_phone_cubit.dart';
+
 // ignore: must_be_immutable
 class OtpScreen extends StatelessWidget {
-  final phoneNumber = '';
+  final phoneNumber;
 
-  OtpScreen({
-    super.key,
-  });
+  OtpScreen({super.key, required this.phoneNumber});
 
   late String otpCode;
 
@@ -44,12 +46,12 @@ class OtpScreen extends StatelessWidget {
   }
 
   void showProgressIndicator(BuildContext context) {
-    AlertDialog alertDialog = const AlertDialog(
+    AlertDialog alertDialog = AlertDialog(
       backgroundColor: Colors.transparent,
       elevation: 0,
       content: Center(
         child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+          valueColor: AlwaysStoppedAnimation<Color>(ColorsManger.white),
         ),
       ),
     );
@@ -100,11 +102,19 @@ class OtpScreen extends StatelessWidget {
     );
   }
 
+  void _login(BuildContext context) {
+    BlocProvider.of<PhoneAuthCubit>(context).submitOTP(otpCode);
+  }
+
   Widget _buildVrifyButton(BuildContext context) {
     return Align(
       alignment: Alignment.centerRight,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          showProgressIndicator(context);
+          _login(context);
+          Navigator.pushNamed(context, RoutersName.homeSreen);
+        },
         style: ElevatedButton.styleFrom(
           minimumSize: const Size(110, 50),
           backgroundColor: ColorsManger.yellow,
@@ -117,6 +127,37 @@ class OtpScreen extends StatelessWidget {
           style: TextStyelManger.font20WhiteBold,
         ),
       ),
+    );
+  }
+
+  Widget _buildPhoneVerificationBloc() {
+    return BlocListener<PhoneAuthCubit, PhoneAuthState>(
+      listenWhen: (previous, current) {
+        return previous != current;
+      },
+      listener: (context, state) {
+        if (state is Loading) {
+          showProgressIndicator(context);
+        }
+
+        if (state is PhoneOTPVerified) {
+          Navigator.pop(context);
+          Navigator.pushNamed(context, RoutersName.homeSreen);
+        }
+
+        if (state is ErrorOccurred) {
+          // Navigator.pop(context);
+          String errorMsg = (state).errorMsg;
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(errorMsg),
+              backgroundColor: Colors.black,
+              duration: const Duration(seconds: 3),
+            ),
+          );
+        }
+      },
+      child: Container(),
     );
   }
 
@@ -139,6 +180,7 @@ class OtpScreen extends StatelessWidget {
                   height: 60,
                 ),
                 _buildVrifyButton(context),
+                _buildPhoneVerificationBloc(),
               ],
             ),
           ),
