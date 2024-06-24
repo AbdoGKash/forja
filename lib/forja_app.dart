@@ -14,7 +14,7 @@ class ForjaApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: RoutersName.authSreen,
+        initialRoute: RoutersName.homeSreen,
         onGenerateRoute: AppRouter.generateRoute,
       ),
     );

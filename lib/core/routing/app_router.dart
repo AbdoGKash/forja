@@ -8,6 +8,7 @@ import 'package:forja/features/list_movice/view/list_movise_screen.dart';
 import 'package:forja/features/phone_auth/logic/cubit/auth_phone_cubit.dart';
 
 import '../../features/home/data/model/movies_model.dart';
+import '../../features/movice_details/view/movise_details_screen.dart';
 import '../../features/otp/otp_screen.dart';
 import '../../features/phone_auth/view/phone_auth_screen.dart';
 
@@ -43,10 +44,14 @@ class AppRouter {
             child: OtpScreen(phoneNumber: phoneNumber),
           ),
         );
-      // case RoutersName.moviseDetailsScreen:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const MoviseDetailsScreen(),
-      //   );
+      case RoutersName.moviseDetailsScreen:
+        final movise = settings.arguments as MoviesDetails;
+
+        return MaterialPageRoute(
+          builder: (_) => MoviseDetailsScreen(
+            moviesDetails: movise,
+          ),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(

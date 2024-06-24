@@ -48,7 +48,11 @@ class MoviesSections extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.all(6.0).w,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(
+                        context, RoutersName.moviseDetailsScreen,
+                        arguments: movies[index]);
+                  },
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(5),
                     child: Image.network(
