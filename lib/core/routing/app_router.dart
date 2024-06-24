@@ -26,8 +26,11 @@ class AppRouter {
       case RoutersName.listMoviseScreen:
         final movies = settings.arguments as List<MoviesDetails>;
         return MaterialPageRoute(
-          builder: (_) => ListMoviseScreen(
-            movies: movies,
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<HomeCubit>(),
+            child: ListMoviseScreen(
+              movies: movies,
+            ),
           ),
         );
       case RoutersName.authSreen:

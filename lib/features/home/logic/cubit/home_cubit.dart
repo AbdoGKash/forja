@@ -6,6 +6,8 @@ part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
+  List<MoviesDetails> searchedForMovies = [];
+
   HomeCubit(this._homeRepo) : super(HomeInitial());
 
   void moviceData() async {
