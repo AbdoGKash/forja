@@ -29,17 +29,14 @@ class MoviseDetailsScreen extends StatelessWidget {
                   height: 10.h,
                 ),
                 const AppTextButton(),
-                SizedBox(
-                  height: 20.h,
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,
-                  child: const Divider(),
-                ),
-                SizedBox(
-                  height: 20.h,
-                ),
-                const AddAndShareAndPromo(),
+                // Padding(
+                //   padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,
+                //   child: const Divider(),
+                // ),
+                // SizedBox(
+                //   height: 20.h,
+                // ),
+                // const AddAndShareAndPromo(),
                 SizedBox(
                   height: 20.h,
                 ),
