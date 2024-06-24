@@ -4,12 +4,12 @@ import 'package:forja/core/injection.dart';
 import 'package:forja/core/routing/routers_name.dart';
 import 'package:forja/features/home/logic/cubit/home_cubit.dart';
 import 'package:forja/features/home/view/home_screen.dart';
-import 'package:forja/features/list_movice/view/list_movise_screen.dart';
+import 'package:forja/features/list_movies/view/list_movise_screen.dart';
 import 'package:forja/features/phone_auth/logic/cubit/auth_phone_cubit.dart';
-import 'package:forja/features/viedo_player/video_player.dart';
+import 'package:forja/features/movies_player/movies_player.dart';
 
 import '../../features/home/data/model/movies_model.dart';
-import '../../features/movice_details/view/movise_details_screen.dart';
+import '../../features/movies_details/view/movies_details_screen.dart';
 import '../../features/otp/otp_screen.dart';
 import '../../features/phone_auth/view/phone_auth_screen.dart';
 
@@ -54,11 +54,11 @@ class AppRouter {
           ),
         );
       case RoutersName.videoPlayerScreen:
-        final urlVideo = settings.arguments as String;
+        final urlMovies = settings.arguments as String;
 
         return MaterialPageRoute(
           builder: (_) => VideoPlayer(
-            urlVideo: urlVideo,
+            urlMovies: urlMovies,
           ),
         );
       default:

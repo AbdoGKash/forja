@@ -29,7 +29,7 @@ class MoviseDetailsScreen extends StatelessWidget {
                   height: 10.h,
                 ),
                 AppTextButton(
-                  urlVideo: moviesDetails.video.toString(),
+                  urlMovies: moviesDetails.video.toString(),
                 ),
                 // Padding(
                 //   padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,

@@ -3,10 +3,10 @@ import 'package:forja/core/routing/routers_name.dart';
 import 'package:forja/core/theming/color_manger.dart';
 
 class AppTextButton extends StatelessWidget {
-  final String urlVideo;
+  final String urlMovies;
   const AppTextButton({
     super.key,
-    required this.urlVideo,
+    required this.urlMovies,
   });
 
   @override
@@ -21,7 +21,7 @@ class AppTextButton extends StatelessWidget {
         minWidth: 350,
         onPressed: () {
           Navigator.pushNamed(context, RoutersName.videoPlayerScreen,
-              arguments: urlVideo);
+              arguments: urlMovies);
         },
         color: ColorsManger.yellow,
         child: const Text(

@@ -4,8 +4,8 @@ import 'package:forja/core/theming/color_manger.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPlayer extends StatefulWidget {
-  final String urlVideo;
-  const VideoPlayer({super.key, required this.urlVideo});
+  final String urlMovies;
+  const VideoPlayer({super.key, required this.urlMovies});
 
   @override
   State<VideoPlayer> createState() => _VideoPlayerState();
@@ -16,7 +16,7 @@ class _VideoPlayerState extends State<VideoPlayer> {
   late VideoPlayerController _videoPlayerController;
   Future initVideo() async {
     _videoPlayerController =
-        VideoPlayerController.networkUrl(Uri.parse(widget.urlVideo));
+        VideoPlayerController.networkUrl(Uri.parse(widget.urlMovies));
     await _videoPlayerController.initialize();
     _chewieController = ChewieController(
         videoPlayerController: _videoPlayerController, autoPlay: true);
