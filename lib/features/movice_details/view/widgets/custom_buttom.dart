@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:forja/core/routing/routers_name.dart';
 import 'package:forja/core/theming/color_manger.dart';
 
 class AppTextButton extends StatelessWidget {
+  final String urlVideo;
   const AppTextButton({
     super.key,
+    required this.urlVideo,
   });
 
   @override
@@ -16,7 +19,10 @@ class AppTextButton extends StatelessWidget {
         ),
         height: 40,
         minWidth: 350,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, RoutersName.videoPlayerScreen,
+              arguments: urlVideo);
+        },
         color: ColorsManger.yellow,
         child: const Text(
           "Watch Now",

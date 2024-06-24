@@ -6,6 +6,7 @@ import 'package:forja/features/home/logic/cubit/home_cubit.dart';
 import 'package:forja/features/home/view/home_screen.dart';
 import 'package:forja/features/list_movice/view/list_movise_screen.dart';
 import 'package:forja/features/phone_auth/logic/cubit/auth_phone_cubit.dart';
+import 'package:forja/features/viedo_player/video_player.dart';
 
 import '../../features/home/data/model/movies_model.dart';
 import '../../features/movice_details/view/movise_details_screen.dart';
@@ -50,6 +51,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => MoviseDetailsScreen(
             moviesDetails: movise,
+          ),
+        );
+      case RoutersName.videoPlayerScreen:
+        final urlVideo = settings.arguments as String;
+
+        return MaterialPageRoute(
+          builder: (_) => VideoPlayer(
+            urlVideo: urlVideo,
           ),
         );
       default:

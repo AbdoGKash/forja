@@ -4,7 +4,6 @@ import 'package:forja/core/theming/color_manger.dart';
 
 import '../../../core/theming/text_styel_manger.dart';
 import '../../home/data/model/movies_model.dart';
-import 'widgets/add_and_share_and_promo.dart';
 import 'widgets/custom_buttom.dart';
 import 'widgets/point.dart';
 import 'widgets/related_and_more.dart';
@@ -18,6 +17,7 @@ class MoviseDetailsScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: ColorsManger.black,
+        // اعمل زر الروجود بشكل مختلف ولون اصفر
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 0).w,
@@ -28,7 +28,9 @@ class MoviseDetailsScreen extends StatelessWidget {
                 SizedBox(
                   height: 10.h,
                 ),
-                const AppTextButton(),
+                AppTextButton(
+                  urlVideo: moviesDetails.video.toString(),
+                ),
                 // Padding(
                 //   padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,
                 //   child: const Divider(),
