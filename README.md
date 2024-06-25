@@ -42,6 +42,7 @@ The application aims to provide an exceptional user experience through an easy-t
       Users can watch movies directly in the app with playback controls, including:<br>
          - Play/Pause: Control the playback of the movie.<br>
          - Seek: Jump to a specific point in the movie.<br>
+         - Volume Control: Adjust the volume.<br>
          - Full Screen Mode: Watch the movie in full screen.
 
 # 🎨 UI
