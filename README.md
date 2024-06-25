@@ -47,6 +47,7 @@ The application aims to provide an exceptional user experience through an easy-t
 # 🎨 UI
 
 **Splash Screen**
+
 <img src="https://github.com/AbdoGKash/forja/assets/160290297/a2ab5cdd-c749-4043-83b7-303ab3ad368e" width="200">
 
 
