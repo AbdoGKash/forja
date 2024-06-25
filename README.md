@@ -1,2 +1,1 @@
-# forja
-This application is for watching movies
+🚀 #Welcome to the Forja App repository! 
