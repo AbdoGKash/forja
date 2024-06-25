@@ -46,10 +46,10 @@ The application aims to provide an exceptional user experience through an easy-t
 
 # 🎨 UI
 
-**Splash Screen**
+# Splash Screen
 ![Screenshot_2024-06-26-00-26-29-67_014e92b21a8e5c9a4b20c138cd020bf6](https://github.com/AbdoGKash/forja/assets/160290297/a2ab5cdd-c749-4043-83b7-303ab3ad368e)
 
-**Register Screen**
+# Register Screen
 ![Screenshot_2024-06-26-00-26-38-63_014e92b21a8e5c9a4b20c138cd020bf6](https://github.com/AbdoGKash/forja/assets/160290297/d63100ff-9d28-48c8-baa7-d6eb1809d364) ! ![Screenshot_2024-06-26-00-27-06-90_014e92b21a8e5c9a4b20c138cd020bf6](https://github.com/AbdoGKash/forja/assets/160290297/03a967f7-0c74-4455-a474-a669352a1ef1)
 
 
