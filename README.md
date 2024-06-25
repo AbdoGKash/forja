@@ -61,5 +61,13 @@ The application aims to provide an exceptional user experience through an easy-t
 <img src="https://github.com/AbdoGKash/forja/assets/160290297/87b92230-26d1-4650-9f21-3e899dd214a1" width="200">
 <img src="https://github.com/AbdoGKash/forja/assets/160290297/4e145792-73a4-41c4-bde5-3e2e5feada7a" width="200">
 
+### Movies list Screen
 
+<img src="https://github.com/AbdoGKash/forja/assets/160290297/b31872ff-5c9e-4bdd-9762-3150dcbc25c1" width="200">
+
+### search 
+
+<img src="https://github.com/AbdoGKash/forja/assets/160290297/a4bdff2a-15e2-40b7-ba09-85025506b456" width="200">
+<img src="https://github.com/AbdoGKash/forja/assets/160290297/bdc6ebfe-2ff3-4be5-8086-02ea08ef992b" width="200">
+<img src="https://github.com/AbdoGKash/forja/assets/160290297/b2b2f3bc-cc1a-423a-bf07-7021f434cf3e" width="200">
 
