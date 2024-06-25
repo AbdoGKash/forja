@@ -9,14 +9,18 @@ The application aims to provide an exceptional user experience through an easy-t
 * **State Management :**<br>
   Bloc & Flutter Bloc: [Bloc](https://pub.dev/packages/bloc) | [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
 * **Networking :**<br>
-  Dio : [Dio](https://pub.dev/packages/dio)<br>
+  Dio : [Dio](https://pub.dev/packages/dio) | [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger)<br>
   Retrofit & Retrofit Generator : [Retrofit](https://pub.dev/packages/retrofit) | [Retrofit Generator](https://pub.dev/packages/retrofit_generator)
+* **dependency injection :** [get_it](https://pub.dev/packages/get_it)<br>
 * **Firebase Integration :**<br>
   Firebase Core & Auth : [Firebase Core](https://pub.dev/packages/firebase_core) | [Firebase Auth](https://pub.dev/packages/firebase_auth)
-* **responsive app :**<br>
-* **splash screen :**<br>
-* ** :**<br>
-* ** :**<br>
+* **responsive app :** [flutter_screenutil](https://pub.dev/packages/flutter_screenutil)<br>
+* **splash screen :** [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)<br>
+* **video player :** [video_player](https://pub.dev/packages/video_player) | [chewie](https://pub.dev/packages/chewie)<br>
+* **otp code :** [pin_code_fields](https://pub.dev/packages/pin_code_fields)<br>
+* **movies slider :** [carousel_slider](https://pub.dev/packages/carousel_slider)<br>
+* **more package :** [json_annotation](https://pub.dev/packages/json_annotation) | [json_serializable](https://pub.dev/packages/json_serializable) | [build_runner](https://pub.dev/packages/build_runner)
+
   
 
 # ✨ Features
