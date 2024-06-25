@@ -5,7 +5,7 @@ The application aims to provide an exceptional user experience through an easy-t
 
 # 🔧 Overview:
 
-Built with Dart & Flutter Framework for seamless performance and stunning UI.
+## Built with Dart & Flutter Framework for seamless performance and stunning UI.
 
 # ✨ Features
 
@@ -27,4 +27,6 @@ Built with Dart & Flutter Framework for seamless performance and stunning UI.
          - Play/Pause: Control the playback of the movie.<br>
          - Seek: Jump to a specific point in the movie.<br>
          - Full Screen Mode: Watch the movie in full screen.
+
+# 🎨 UI
 
