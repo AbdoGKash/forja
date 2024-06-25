@@ -5,7 +5,7 @@ The application aims to provide an exceptional user experience through an easy-t
 
 # 🔧 Overview:
 
-## Built with Dart & Flutter Framework for seamless performance and stunning UI.
+**Built with Dart & Flutter Framework for seamless performance and stunning UI.**
 
 # ✨ Features
 
