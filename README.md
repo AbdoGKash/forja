@@ -6,8 +6,8 @@ The application aims to provide an exceptional user experience through an easy-t
 # 🔧 Overview:
 
 * **Built with Dart & Flutter Framework for seamless performance and stunning UI.**<br>
-* **State Management:**
- Bloc & Flutter Bloc: [Bloc](https://pub.dev/packages/bloc) | [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
+* **State Management:**<br>
+  Bloc & Flutter Bloc: [Bloc](https://pub.dev/packages/bloc) | [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
 
 # ✨ Features
 
