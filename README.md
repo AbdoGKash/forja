@@ -5,7 +5,7 @@ The application aims to provide an exceptional user experience through an easy-t
 
 # ✨ Features
 
-1- User Authentication: Users can sign up and log in using their phone numbers.
+* User Authentication: Users can sign up and log in using their phone numbers.
 2- Movie Sections: The app features multiple sections, each containing a curated collection of movies.
 3- Advanced Search: Users can search for specific movies using various filters.
 4- Detailed Movie Information: 
