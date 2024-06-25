@@ -17,36 +17,24 @@ class MoviseDetailsScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: ColorsManger.black,
-        // اعمل زر الروجود بشكل مختلف ولون اصفر
         body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0).w,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _header(context),
-                SizedBox(
-                  height: 10.h,
-                ),
-                AppTextButton(
-                  urlMovies: moviesDetails.video.toString(),
-                ),
-                // Padding(
-                //   padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,
-                //   child: const Divider(),
-                // ),
-                // SizedBox(
-                //   height: 20.h,
-                // ),
-                // const AddAndShareAndPromo(),
-                SizedBox(
-                  height: 20.h,
-                ),
-                RelatedAndMore(
-                  moviesDetails: moviesDetails,
-                ),
-              ],
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _header(context),
+              SizedBox(
+                height: 10.h,
+              ),
+              AppTextButton(
+                urlMovies: moviesDetails.video.toString(),
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              RelatedAndMore(
+                moviesDetails: moviesDetails,
+              ),
+            ],
           ),
         ),
       ),
@@ -118,11 +106,11 @@ class MoviseDetailsScreen extends StatelessWidget {
                         SizedBox(
                           width: 5.w,
                         ),
-                        Text(moviesDetails.rating.toString(), // From API
+                        Text(moviesDetails.rating.toString(),
                             style: TextStyelManger.font14White),
                         const Point(),
                         Text(
-                          moviesDetails.duration.toString(), // From API
+                          moviesDetails.duration.toString(),
                           style: TextStyelManger.font14White,
                         ),
                         const Point(),

@@ -22,13 +22,13 @@ class _ListMoviseScreenState extends State<ListMoviseScreen> {
   Widget _buildSearchField() {
     return TextField(
       controller: _searchTextController,
-      cursorColor: Colors.grey,
-      decoration: const InputDecoration(
-        hintText: 'Find a movies...',
+      cursorColor: ColorsManger.white,
+      decoration: InputDecoration(
+        hintText: AppStrings.findAMovies,
         border: InputBorder.none,
-        hintStyle: TextStyle(color: Colors.grey, fontSize: 18),
+        hintStyle: TextStyelManger.font16White,
       ),
-      style: const TextStyle(color: Colors.grey, fontSize: 18),
+      style: TextStyelManger.font16White,
       onChanged: (searchedMovies) {
         _addSearchedForItemsToSearchedList(searchedMovies);
       },
@@ -51,16 +51,16 @@ class _ListMoviseScreenState extends State<ListMoviseScreen> {
             _searchTextController.clear();
             Navigator.pop(context);
           },
-          icon: const Icon(Icons.clear, color: Colors.grey),
+          icon: Icon(Icons.clear, color: ColorsManger.white),
         ),
       ];
     } else {
       return [
         IconButton(
           onPressed: _startSearch,
-          icon: const Icon(
+          icon: Icon(
             Icons.search,
-            color: Colors.grey,
+            color: ColorsManger.white,
           ),
         ),
       ];
@@ -86,12 +86,12 @@ class _ListMoviseScreenState extends State<ListMoviseScreen> {
       child: Scaffold(
         backgroundColor: ColorsManger.black,
         appBar: AppBar(
-          backgroundColor: Colors.amber,
+          backgroundColor: ColorsManger.black,
           leading: _isSearching
-              ? const BackButton(
-                  color: Colors.grey,
+              ? BackButton(
+                  color: ColorsManger.white,
                 )
-              : Container(),
+              : const SizedBox.shrink(),
           title: _isSearching ? _buildSearchField() : _appBar(),
           actions: _buildAppBarActions(),
         ),
@@ -109,15 +109,12 @@ class _ListMoviseScreenState extends State<ListMoviseScreen> {
     );
   }
 
-  PreferredSizeWidget _appBar() {
-    return AppBar(
-      backgroundColor: ColorsManger.black,
-      title: Text(
+  _appBar() {
+    return Center(
+      child: Text(
         AppStrings.movies,
         style: TextStyelManger.font20WhiteBold,
       ),
-      centerTitle: true,
-      foregroundColor: ColorsManger.white,
     );
   }
 

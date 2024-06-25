@@ -3,8 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:forja/core/helper/app_strings.dart';
 import 'package:forja/core/theming/color_manger.dart';
+import 'package:forja/features/home/data/model/movies_model.dart';
 import 'package:forja/features/home/logic/cubit/home_cubit.dart';
-import 'widgets/foryou_sections.dart';
+import 'widgets/movies_banner.dart';
 import 'widgets/movies_sections.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: ColorsManger.black,
         body: BlocBuilder<HomeCubit, HomeState>(
           buildWhen: (previous, current) =>
               current is LoadingState || current is LoadedState,
@@ -28,18 +29,16 @@ class HomeScreen extends StatelessWidget {
                 )),
               );
             } else if (state is LoadedState) {
-              var moviceForYou = state.movice.foryou;
-              var moviceAction = state.movice.action;
-              var moviceComedy = state.movice.comedy;
-              var moviceRomantic = state.movice.romantic;
-              var moviceAnimation = state.movice.animation;
+              List<MoviesDetails>? moviesForYou = state.movice.foryou;
+              List<MoviesDetails>? moviceAction = state.movice.action;
+              List<MoviesDetails>? moviceComedy = state.movice.comedy;
+              List<MoviesDetails>? moviceRomantic = state.movice.romantic;
+              List<MoviesDetails>? moviceAnimation = state.movice.animation;
               return SingleChildScrollView(
                 child: Column(
                   children: [
-                    ForyouSections(
-                      moviesCover: moviceForYou![0].cover.toString(),
-                      moviesName: moviceForYou[0].name.toString(),
-                      moviesRating: moviceForYou[0].rating.toString(),
+                    MoviesBanner(
+                      moviesForYou: moviesForYou!,
                     ),
                     MoviesSections(
                       movies: moviceAction!,

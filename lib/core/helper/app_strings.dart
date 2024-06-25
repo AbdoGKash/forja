@@ -14,4 +14,5 @@ class AppStrings {
   static const String enterYour6DigitCodeNumbersSentTo =
       'Enter your 6 digit code numbers sent to ';
   static const String verify = "Verify";
+  static const String findAMovies = "Find a movies...";
 }
