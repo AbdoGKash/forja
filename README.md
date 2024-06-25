@@ -13,6 +13,10 @@ The application aims to provide an exceptional user experience through an easy-t
   Retrofit & Retrofit Generator : [Retrofit](https://pub.dev/packages/retrofit) | [Retrofit Generator](https://pub.dev/packages/retrofit_generator)
 * **Firebase Integration :**<br>
   Firebase Core & Auth : [Firebase Core](https://pub.dev/packages/firebase_core) | [Firebase Auth](https://pub.dev/packages/firebase_auth)
+* **responsive app :**<br>
+* **splash screen :**<br>
+* ** :**<br>
+* ** :**<br>
   
 
 # ✨ Features
