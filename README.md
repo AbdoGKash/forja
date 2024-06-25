@@ -54,7 +54,7 @@ The application aims to provide an exceptional user experience through an easy-t
 
 <img src="https://github.com/AbdoGKash/forja/assets/160290297/d63100ff-9d28-48c8-baa7-d6eb1809d364" width="200">
 <img src="https://github.com/AbdoGKash/forja/assets/160290297/03a967f7-0c74-4455-a474-a669352a1ef1" width="200">
-<img src="" width="200">
+
 ### Home Screen
 
 <img src="https://github.com/AbdoGKash/forja/assets/160290297/2e83ddce-81bd-4e85-bb5b-24780dc1fdb2" width="200">
