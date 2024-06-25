@@ -80,4 +80,4 @@ The application aims to provide an exceptional user experience through an easy-t
 ### movies player Screen
 
 <img src="https://github.com/AbdoGKash/forja/assets/160290297/8b357592-5211-435f-95f6-32358f21bb83" width="200">
-<img src="https://github.com/AbdoGKash/forja/assets/160290297/bfa73c3a-7c97-400d-bf9e-1bc305a90658" width="200">
+<img src="https://github.com/AbdoGKash/forja/assets/160290297/bfa73c3a-7c97-400d-bf9e-1bc305a90658" higth="200">
