@@ -7,12 +7,9 @@ The application aims to provide an exceptional user experience through an easy-t
 
 * **Built with Dart & Flutter Framework for seamless performance and stunning UI.**<br>
 * **State Management :** Bloc & Flutter Bloc: [Bloc](https://pub.dev/packages/bloc) | [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
-* **Api Integration :**<br>
-  Dio : [Dio](https://pub.dev/packages/dio) | [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger)<br>
-  Retrofit & Retrofit Generator : [Retrofit](https://pub.dev/packages/retrofit) | [Retrofit Generator](https://pub.dev/packages/retrofit_generator)
+* **Api Integration :** Dio & Retrofit & Retrofit Generator : [Dio](https://pub.dev/packages/dio) | [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger) | [Retrofit](https://pub.dev/packages/retrofit) | [Retrofit Generator](https://pub.dev/packages/retrofit_generator)
 * **dependency injection :** [get_it](https://pub.dev/packages/get_it)<br>
-* **Firebase Integration :**<br>
-  Firebase Core & Auth : [Firebase Core](https://pub.dev/packages/firebase_core) | [Firebase Auth](https://pub.dev/packages/firebase_auth)
+* **Firebase Integration :** Firebase Core & Auth : [Firebase Core](https://pub.dev/packages/firebase_core) | [Firebase Auth](https://pub.dev/packages/firebase_auth)
 * **responsive app :** [flutter_screenutil](https://pub.dev/packages/flutter_screenutil)<br>
 * **splash screen :** [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)<br>
 * **video player :** [video_player](https://pub.dev/packages/video_player) | [chewie](https://pub.dev/packages/chewie)<br>
