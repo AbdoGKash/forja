@@ -7,8 +7,8 @@ The application aims to provide an exceptional user experience through an easy-t
 
 * **Built with Dart & Flutter Framework for seamless performance and stunning UI.**<br>
 * **State Management :** [Bloc](https://pub.dev/packages/bloc) | [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
-* **Api Integration :** [Dio](https://pub.dev/packages/dio) | [Retrofit](https://pub.dev/packages/retrofit) | [Retrofit Generator](https://pub.dev/packages/retrofit_generator)
-* **dependency injection :** [get_it](https://pub.dev/packages/get_it) | [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger)<br>
+* **Api Integration :** [Dio](https://pub.dev/packages/dio) | [Retrofit](https://pub.dev/packages/retrofit) | [Retrofit Generator](https://pub.dev/packages/retrofit_generator)| [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger)<br>
+* **dependency injection :** [get_it](https://pub.dev/packages/get_it)<br>
 * **Firebase Integration :** [Firebase Core](https://pub.dev/packages/firebase_core) | [Firebase Auth](https://pub.dev/packages/firebase_auth)
 * **responsive app :** [flutter_screenutil](https://pub.dev/packages/flutter_screenutil)<br>
 * **splash screen :** [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)<br>
