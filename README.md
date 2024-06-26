@@ -8,7 +8,7 @@ The application aims to provide an exceptional user experience through an easy-t
 * **Built with Dart & Flutter Framework for seamless performance and stunning UI.**<br>
 * **State Management :**<br>
   Bloc & Flutter Bloc: [Bloc](https://pub.dev/packages/bloc) | [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
-* **Networking :**<br>
+* **Api Integration :**<br>
   Dio : [Dio](https://pub.dev/packages/dio) | [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger)<br>
   Retrofit & Retrofit Generator : [Retrofit](https://pub.dev/packages/retrofit) | [Retrofit Generator](https://pub.dev/packages/retrofit_generator)
 * **dependency injection :** [get_it](https://pub.dev/packages/get_it)<br>
