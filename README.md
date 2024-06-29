@@ -40,10 +40,9 @@ The application aims to provide an exceptional user experience through an easy-t
          - Volume Control: Adjust the volume.<br>
          - Full Screen Mode: Watch the movie in full screen.
 # 🌟 App demo video
-ج
-[YouTube](https://youtu.be/ldtGxfD75Uc?si=W_Rwu23Xecl7h6Ki)
-جد
-ج
+
+### [YouTube](https://youtu.be/ldtGxfD75Uc?si=W_Rwu23Xecl7h6Ki)
+
 # 🎨 UI
 
  ### Splash Screen
